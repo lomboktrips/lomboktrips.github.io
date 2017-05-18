@@ -1,10 +1,10 @@
 
-var base_url = 'http://localhost/hi-lombok/api/';
+var base_url = 'https://rumahkost.com/api/';
 var currentLatitude;
 var currentLongitude;
 var marker;
 var _address = null;
-var icon = "/assets/img/marker.png";
+var icon = "assets/img/marker.png";
 var info;
 var desc = null;
 
@@ -14,17 +14,12 @@ var lat = -8.650979;
 var long = 116.32494380000003;
 
 // HOME CONTROLLER
-app.controller('homeCtrl', function($scope, $http, mainService) 
+app.controller('homeCtrl', function($scope, $http, mainService)
 {
 	mainService._isGoBack(false);
 	mainService._setTitle("Home");
 	$scope.loading = true;
 	$("#content").hide();
-
-	$scope.select = {
-            value: "Option1",
-            choices: ["Option1", "I'm an option", "This is materialize", "No, this is Patrick."]
-        };
 
 	// get locations
 	$http.get(base_url + 'lokasi.php')
@@ -62,10 +57,10 @@ app.controller('homeMapsCtrl', function ($scope, $http, mainService) {
     $scope.map = new google.maps.Map(document.getElementById('home-map'), mapOptions);
 
     $scope.markers = [];
-    
+
     var infoWindow = new google.maps.InfoWindow();
-    
-    var createMarker = function (info){        
+
+    var createMarker = function (info){
         var marker = new google.maps.Marker({
             map: $scope.map,
             icon: icon,
@@ -79,7 +74,7 @@ app.controller('homeMapsCtrl', function ($scope, $http, mainService) {
         marker.photo = '<img src="'+info.image+'" width="200" class="center">';
         marker.image = info.image;
         marker.url = '<div class="center"><a href="#/detail/'+info.location_url+'/'+info.category_url+'/'+info.name+'">See More Details</a></div>';
-        
+
         google.maps.event.addListener(marker, 'click', function(){
             infoWindow.setContent(marker.photo+'<h6 class="center">' + info.title + '</h6>' + marker.content + marker.url);
             infoWindow.open($scope.map, marker);
@@ -105,7 +100,7 @@ app.controller('homeMapsCtrl', function ($scope, $http, mainService) {
 		}
 		$scope.loading = false;
 		if(!$scope.loading) $("#content").fadeIn();
-	});  
+	});
 
     $scope.openInfoWindow = function(e, selectedMarker){
         e.preventDefault();
@@ -131,13 +126,13 @@ app.controller('homeMapsCtrl', function ($scope, $http, mainService) {
 });
 
 // CATEGORY CONTROLLER
-app.controller('loginCtrl', function($scope) 
+app.controller('loginCtrl', function($scope)
 {
-	
+
 });
 
 // All Items CONTROLLER
-app.controller('allItemsCtrl', function($scope, $http, mainService) 
+app.controller('allItemsCtrl', function($scope, $http, mainService)
 {
     mainService._isGoBack();
     $scope.type = 'location';
@@ -158,11 +153,11 @@ app.controller('allItemsCtrl', function($scope, $http, mainService)
         $scope.page_title = "";
         $scope.loading = false;
         if(!$scope.loading) $("#content").fadeIn();
-    });     
+    });
 });
 
 // CATEGORY CONTROLLER
-app.controller('locationCtrl', function($scope, $routeParams, $http, mainService) 
+app.controller('locationCtrl', function($scope, $routeParams, $http, mainService)
 {
 	var location = $routeParams.location;
 	mainService._isGoBack();
@@ -184,11 +179,11 @@ app.controller('locationCtrl', function($scope, $routeParams, $http, mainService
 		$scope.page_title = "";
 		$scope.loading = false;
 		if(!$scope.loading) $("#content").fadeIn();
-	});     
+	});
 });
 
 // CATEGORY CONTROLLER
-app.controller('categoryCtrl', function($scope, $routeParams, $http, mainService) 
+app.controller('categoryCtrl', function($scope, $routeParams, $http, mainService)
 {
 	var category = $routeParams.category;
 	mainService._isGoBack();
@@ -214,7 +209,7 @@ app.controller('categoryCtrl', function($scope, $routeParams, $http, mainService
 });
 
 // SINGLE CONTROLLER
-app.controller('singleCtrl', function($scope, $routeParams, $http, mainService, mapService) 
+app.controller('singleCtrl', function($scope, $routeParams, $http, mainService, mapService)
 {
 	var loc = $routeParams.location;
 	var cat = $routeParams.category;

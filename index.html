@@ -104,48 +104,54 @@
 
     <!-- Modal About -->
     <div id="modal-about" class="modal">
-        <div class="modal-content center-align">
-            <h5>About</h5>
+        <div class="modal-content">
+            <h5>About Lombok Trips</h5>
+            <p>Lombok Trips is a progressive web apps for information about tour, culture and event of Lombok</p>
             <p>
-                Lombok Trips Version 1.0.0<br> Developed by Junaidi<br>
+                Developed by:<br>
+                1. Junaidi (120030532)<br>
+                2. Ucok Prabawa Artha (140030395)<br>
+                3. Putu Gede Rizky Raditya Librawan (140030309)<br>
             </p>
 
-            <p>
+            <p class="hide">
                 Contact:<br> Email: <a href="mailto:junasmarts@gmail.com">junasmarts@gmail.com</a><br> Mobile: <a href="tel:085934882521">0859 3488 2521</a>
             </p>
+
+            <p class="center-align purple darken-3 white-text">Version 1.0.0</p>
         </div>
         <div class="modal-footer">
-            <a href="javascript:void" class="modal-action modal-close waves-effect waves-purple deep-purple-text btn-flat">OK</a>
+            <a href="javascript:void" class="modal-action modal-close waves-effect waves-purple teal-text btn-flat">OK</a>
         </div>
     </div>
 
     <!-- Modal Feedback -->
     <div id="modal-feedback" class="modal bottom-sheet">
+        <form>
         <div class="modal-content">
             <p class="center-align">Please send your suggestion to us for the continuity of this application to be even better</p>
-            <form>
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input type="text" id="name">
+                        <input type="text" id="name" required>
                         <label for="name">Full Name</label>
                     </div>
 
                     <div class="input-field col s12 m6">
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" class="validate" required>
                         <label for="email" data-error="Invalid Email" data-success="right">Email</label>
                     </div>
 
                     <div class="input-field col s12">
-                        <textarea id="message" class="materialize-textarea" data-length="200"></textarea>
+                        <textarea id="message" class="materialize-textarea" data-length="200" required></textarea>
                         <label for="message">Messages</label>
                     </div>
                 </div>
-            </form>
         </div>
 
         <div class="modal-footer">
-            <a href="javascript:void" class="modal-action modal-close waves-effect waves-purple deep-purple-text btn-flat">SEND</a>
+            <button type="submit" onclick="alert('Thank you for your Feedback.')" class="modal-action modal-close waves-effect waves-purple teal-text btn-flat">SEND</button>
         </div>
+        </form>
     </div>
 
 
