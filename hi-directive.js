@@ -1,14 +1,14 @@
 app.directive("hiGrid", function() {
     return {
     	restrict: 'E',
-        templateUrl : "/templates/hi-grid.html"
+        templateUrl : "templates/hi-grid.html"
     };
 });
 
 app.directive('hiSlider', function($timeout) {
   return {
     restrict: 'E',
-    templateUrl: '/templates/hi-slider.html'
+    templateUrl: 'templates/hi-slider.html'
   };
 });
 
