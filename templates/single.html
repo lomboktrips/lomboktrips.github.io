@@ -1,0 +1,126 @@
+
+<div id="" ng-controller="singleCtrl">
+	<img ng-if="status === 1" ng-src="{{item.image}}" width="100%" class="singleImage">
+
+	<div class="container">
+		<loading></loading>
+		<p class="alert-error center red white-text">{{messages}}</p>
+		<div ng-if="status === 1">
+		<div class="single-content">
+    
+			<h4>{{item.title}} <i class="material-icons right orange-text">star</i></h4>
+
+			<div class="reviews">
+                3.5
+                <i class="fa fa-star orange-text"></i>
+                <i class="fa fa-star orange-text"></i>
+                <i class="fa fa-star orange-text"></i>
+                <i class="fa fa-star-half-o orange-text"></i>
+                <i class="fa fa-star-o"></i>
+                <small>20 Reviews</small> 
+            </div>
+
+			<div class="row">
+				<div class="col s12 grey-text">
+					Lokasi: <a class="" ng-href="#/location/{{item.location_url}}">{{item.location_title}}</a>, 
+					Kategori: <a class="" ng-href="#/category/{{item.category_url}}">{{item.category_title}}</a>
+				</div>
+
+				<div class="col s12">
+					<div style="margin-top: 1em"></div>
+
+		          	<div class="card grey lighten-3">
+		            	<div class="card-content ">
+		              		<p>{{item.short_desc}}</p>
+		            	</div>
+		          	</div>
+		        </div>
+
+				<div class="col s12">
+
+					<div class="card">
+			            <div class="card-image">
+			              	<div id="map" style="height: 100%"></div>
+			            </div>
+
+			            <input type="hidden" ng-model="posisi" id="posisi">
+			            <input type="hidden" ng-model="destinasi" id="destinasi">
+			            <div class="card-action" style="padding: 10px 0px 10px 15px">
+			            	<div class="row" style="margin-bottom: 0px;">
+			            		<div class="col s4 center-align"><a class="grey-text darken-4" href="javascript:void" ng-click="getDirection()" target="_BLANK"><i class="material-icons">directions</i></a></div>
+			            		<div class="col s4 center-align"><a class="grey-text darken-4" href="javascript:void"><i class="material-icons">phone</i></a></div>
+			            		<div class="col s4 center-align"><a class="grey-text darken-4" href="javascript:void"><i class="material-icons">language</i></a></div>
+			              	</div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col s12">
+					<ul class="collapsible popout" data-collapsible="accordion" watch>
+						<li ng-if="item.descriptions.length > 0">
+							<div class="collapsible-header active">
+								<i class="material-icons">view_headline</i> Descriptions
+							</div>
+
+							<div class="collapsible-body">
+								{{item.descriptions}}
+							</div>
+						</li>
+
+						<li ng-if="galleries.length > 0">
+							<div class="collapsible-header">
+								<i class="material-icons">perm_media</i> Photos
+							</div>
+
+							<div class="collapsible-body">
+								<div class="row">
+									<div ng-repeat="image in galleries">
+										<div class="col s6 m4 l3">
+											<img ng-src="{{image.src}}" alt="{{item.title}} {{image.title}}" title="{{item.title}} {{image.title}}" height="180" width="100%">
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li ng-if="item.video.length > 0">
+							<div class="collapsible-header">
+								<i class="material-icons">videocam</i> Video
+							</div>
+
+							<div class="collapsible-body">
+
+							</div>
+						</li>
+
+						<li ng-if="item.direction_info.length > 0">
+							<div class="collapsible-header">
+								<i class="material-icons">room</i> Direction Info
+							</div>
+
+							<div class="collapsible-body">
+								{{item.direction_info}}
+							</div>
+						</li>
+
+						<li ng-if="item.additional_info.length > 0">
+							<div class="collapsible-header">
+								<i class="material-icons">playlist_add</i> Additional Info
+							</div>
+
+							<div class="collapsible-body">
+								<p>
+									{{item.additional_info}}
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>

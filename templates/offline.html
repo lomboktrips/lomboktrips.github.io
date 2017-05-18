@@ -1,0 +1,40 @@
+<div class="container" ng-controller="offlineCtrl">
+    <loading></loading>
+    
+    <div class="offline-wrapper">
+		<div class="content">
+
+			<ul class="collapsible popout" data-collapsible="accordion" >
+				<li>
+					<div class="collapsible-header purple darken-4 white-text">
+						<i class="material-icons">videocam</i> See Video 1
+					</div>
+
+					<div class="collapsible-body purple darken-4 white-text">
+						<video width="100%" controls="">
+						    <source ng-src="/assets/videos/halal-tourism-lombok-2.mp4" type="video/mp4">
+						</video>
+					</div>
+				</li>
+
+				<li>
+					<div class="collapsible-header purple darken-4 white-text">
+						<i class="material-icons">videocam</i> See Video 2
+					</div>
+
+					<div class="collapsible-body purple darken-4 white-text">
+						<video width="100%" controls="">
+						    <source ng-src="/assets/videos/halal-tourism-lombok-1.mp4" type="video/mp4">
+						</video>
+					</div>
+				</li>
+			</ul>
+
+			<img ng-src="/assets/img/off.gif" class="">
+	    	<h3 class="red-text">You are now offline</h3>
+	    	<p class="flow-text">Please connect your device with WIFI or Mobile Data</p>
+	    	<button ng-click="checkConnection()" class="waves-effect waves-light btn blue darken-3"><i class="material-icons left">refresh</i> Retry Connect</button>
+    	</div>
+    </div>
+
+</div>

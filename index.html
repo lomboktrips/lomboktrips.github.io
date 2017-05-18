@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Lombok Trips</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Lombok Trips">
+<meta name="apple-mobile-web-app-title" content="Lombok Trips">
+<meta name="theme-color" content="#008975">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-navbutton-color" content="#008975">
+<meta name="msapplication-starturl" content="index.html">
+<meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+<link rel="stylesheet" href="assets/css/materialize.min.css" />
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/animate.min.css" />
+<link rel="stylesheet" href="assets/css/custom-style.css" />
+
+<body ng-app="HIApp">
+
+    <!--<div class="screenLoader" ng-show>
+        <img src="assets/img/icon.png" width="220px">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>-->
+
+    <div class="navbar-fixed" id="nav-menu">
+        <nav class="nav nav-extended" role="navigation">
+            <div class="nav-wrapper">
+                <a href="" data-activates="slide-out" id="menu" class="button-collapse animated flipInY"><i class="material-icons">menu</i></a>
+
+
+                <ul class="left">
+                    <li><a href="javascript:void(0)" onclick="window.history.back(-1)" class="btn-back animated flipInY" id="back" style="display: none;"><i class="material-icons">arrow_back</i></a></li>
+                </ul>
+
+                <div class="brand-logo center hide"><a href="#/"> LOMBOK TRIPS</a></div>
+
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="userView">
+                            <div class="background">
+                                <img src="./assets/img/bg.jpg" height="100%" width="300">
+                            </div>
+                            <img class="circle" src="assets/img/icon.png">
+                            <span class="white-text">Lombok Trips</span>
+                        </div>
+                    </li>
+                    <li><a href="#/all"><i class="material-icons">home</i> All Place</a></li>
+                    <li><a href="javascript:void"><i class="material-icons">save</i> Saved Place</a></li>
+                    <li class="divider"></li>
+
+                    <li class=""><a>Settings<i class="material-icons">settings</i></a></li>
+                    <li class=""><a>Logout<i class="material-icons">input</i></a></li>
+                </ul>
+
+                <ul class="right">
+                    <li><a href="#/"><i class="material-icons">home</i></a></li>
+                    <li><a href="javascript:void" onclick="window.location.reload()"><i class="material-icons">refresh</i></a></li>
+                    <li><a class="dropdown-button" href="javascript:void" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="javascript:void" data-target="modal-feedback">Feedback</a></li>
+                    <li><a href="javascript:void" data-target="modal-about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+        <div class="page animate" ng-view></div>
+    </div>
+
+    <footer style="display: none">
+        <div class="container">
+            <p class="copyright">&copy;2017 Hi Lombok. All Right Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Modal About -->
+    <div id="modal-about" class="modal">
+        <div class="modal-content center-align">
+            <h5>About</h5>
+            <p>
+                Lombok Trips Version 1.0.0<br> Developed by Junaidi<br>
+            </p>
+
+            <p>
+                Contact:<br> Email: <a href="mailto:junasmarts@gmail.com">junasmarts@gmail.com</a><br> Mobile: <a href="tel:085934882521">0859 3488 2521</a>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void" class="modal-action modal-close waves-effect waves-purple deep-purple-text btn-flat">OK</a>
+        </div>
+    </div>
+
+    <!-- Modal Feedback -->
+    <div id="modal-feedback" class="modal bottom-sheet">
+        <div class="modal-content">
+            <p class="center-align">Please send your suggestion to us for the continuity of this application to be even better</p>
+            <form>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input type="text" id="name">
+                        <label for="name">Full Name</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <input id="email" type="email" class="validate">
+                        <label for="email" data-error="Invalid Email" data-success="right">Email</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <textarea id="message" class="materialize-textarea" data-length="200"></textarea>
+                        <label for="message">Messages</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <a href="javascript:void" class="modal-action modal-close waves-effect waves-purple deep-purple-text btn-flat">SEND</a>
+        </div>
+    </div>
+
+
+    <!-- include jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/angular-materialize.min.js"></script>
+    <script src="hi-app.js"></script>
+    <script src="hi-directive.js"></script>
+    <script src="hi-service.js"></script>
+    <script src="hi-controller.js"></script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered');
+                }).catch(function(err) {
+                    console.log('Service Worker registration failed: ', err);
+                });
+        }
+
+        $(document).ready(function() {
+            // initialize modal
+            $('.button-collapse').sideNav({
+                menuWidth: 250,
+                edge: 'left',
+                closeOnClick: true,
+                draggable: true
+            });
+
+            if (!navigator.onLine) {
+                window.location.href = "#/offline";
+            }
+
+            $('.modal').modal({
+                dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                opacity: .5, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+                outDuration: 200, // Transition out duration
+                endingTop: '20%'
+            });
+        });
+
+    </script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoQvZ30_QWUJsDClGjnYV2Tgk12Wv4oAc"></script>
+</body>
+
+</html>

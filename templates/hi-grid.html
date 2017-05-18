@@ -1,0 +1,47 @@
+<div class="row">
+    <div ng-repeat="item in items" id="lists">
+        <div class="col s12 m6 l4">
+            <div class="card sticky-action">
+                <a href="#/detail/{{item.location_url}}/{{item.category_url}}/{{item.name}}" title="{{item.title}}">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img ng-src="{{item.image}}" title="{{item.title}}" alt="{{item.title}}">
+                        <span class="card-title">{{item.title}}</span>
+                        <div class="type {{item.category_color}}">
+                            <span ng-if="type == 'category'">{{item.location_title}}</span>
+                            <span ng-if="type == 'location'">{{item.category_title}}</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="card-content">
+                    <p>
+                        3.5
+                        <i class="fa fa-star orange-text"></i>
+                        <i class="fa fa-star orange-text"></i>
+                        <i class="fa fa-star orange-text"></i>
+                        <i class="fa fa-star-half-o orange-text"></i>
+                        <i class="fa fa-star-o"></i>
+                        <small>20 Ulasan</small> 
+                    </p>
+                    <span>20 Km dari lokasi saat ini </span>
+                </div>
+
+                <div class="card-action white" style="padding: 5px">
+                    <div class="row" style="margin: 0px;">
+                        <div class="col s4 left-align">
+                            <a href="javascript:void" class="favorite grey-text"><i class="material-icons">favorite</i></a>
+                        </div>
+
+                        <div class="col s4 center-align">
+                            <a href="javascript:void" class="blue-text"><i class="material-icons">navigation</i></a>
+                        </div>
+
+                        <div class="col s4 right-align">
+                            <a href="javascript:void" class="grey-text"><i class="material-icons right">more_vert</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

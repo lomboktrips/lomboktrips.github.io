@@ -1,0 +1,70 @@
+
+<style type="text/css">
+:root a:hover {color: #eee!important;}
+</style>
+
+<div class="purple darken-3" id="" ng-controller="loginCtrl" style="height: 100vh">
+	<center>
+      <img class="responsive-img" style="width: 120px;margin-top: 3em;opacity: .9;" src="assets/img/ok.png" />
+      <div style="margin-bottom: 1em"></div>
+
+      <div class="container" id="socialBox">
+      	<div class="z-deth-1 purple darken-3" style="display: inline-block; padding: 0px; border: 0px solid #eee;border-radius: 0px;color: #fafafa;">
+
+      		<div class="row">
+      			<a href="javascript:void(0)" name='btn_login' class='col s12 btn btn-large waves-effect blue darken-4'>Masuk Menggunakan Facebook</a><br/><br><br>
+            	<a href="javascript:void(0)" name='btn_register' class='col s12 btn btn-large waves-effect red darken-4'>Masuk Menggunakan Google</a><br/><br><br>
+            	<a href="javascript:void(0)" id="btnemailpass" name='btn_register' class='col s12 btn btn-large waves-effect grey darken-1'>Masuk Menggunakan Email </a>
+      		</div>
+      	</div>
+      </div>
+
+      <div class="container hide" id="emailpassBox">
+        <div class="z-depth-1 purple darken-4" style="display: inline-block; padding: 30px 40px 20px 40px; border: 1px solid #eee;border-radius: 0px;color: #fafafa">
+
+          <form class="col s12" ng-submit="login()">
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input type='email' id='email' ng-model="email" ng-init="email='junasmarts@gmail.com'" required/>
+                <label class="active" for='email'>Masukkan alamat email anda</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input type='password' name='password' id='password' ng-model="password" ng-init="password='jhun300393'" required/>
+                <label class="active" for='password'>Masukkan kata sandi anda</label>
+              </div>
+              <label style='float: right;'><a href="javascript:void(0)"><b>Lupa Kata Sandi?</b></a></label>
+            </div>
+
+            <div class='row'>
+            	<button type='submit' name='btn_login' class='col s12 btn waves-effect purple darken-3'>MASUK</button><br/><br>
+            	<a href="javascript:void(0)" name='btn_register' class='col s12 btn waves-effect green darken-4'>DAFTAR</a><br><br>
+            	<a href="javascript:void(0)" id="btnback" class='col s12 btn waves-effect grey darken-1'>Kembali</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </center>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var nav = document.getElementById('nav-menu');
+	var btnemailpass = document.getElementById('btnemailpass');
+	var btnback = document.getElementById('btnback');
+	var emailpassBox = document.getElementById('emailpassBox');
+	var socialBox = document.getElementById('socialBox'); 
+
+	btnemailpass.addEventListener('click', function(){
+		socialBox.classList.add('hide');
+		emailpassBox.classList.remove("hide");
+	});
+
+	btnback.addEventListener('click', function(){
+		socialBox.classList.remove('hide');
+		emailpassBox.classList.add("hide");
+	})
+});
+</script>

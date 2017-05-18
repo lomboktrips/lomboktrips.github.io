@@ -1,0 +1,56 @@
+
+<div ng-controller="homeCtrl" class="page-home">
+	
+	<loading></loading>
+	
+	<div id="content">
+
+	<!--<div class="row hide">
+		<h5 class="title center">The populer about lombok?</h5>
+		<div class="col s12 m6">
+			<iframe width="100%" height="400" src="https://www.youtube.com/embed/06KgwQPDX08?autoplay=0&controls=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+		<div class="col s12 m6">
+			<iframe width="100%" height="400" src="https://www.youtube.com/embed/v8TCdlr-Ny4?autoplay=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>-->
+
+
+	<div ng-if="locationsCount > 0">
+		<h5 class="title center">Where do you want to go?</h5>
+		<div class="row list-location">
+			<div ng-repeat="item in locations">
+				<div class="col s6 m6 l4 list">
+		    	<div class="card item">
+		    		<a ng-href="#/location/{{item.name}}">
+				    <div class="card-image waves-effect waves-block waves-light">
+						<img ng-src="{{item.image}}" title="{{item.title}}">
+				        <span class="card-title center">{{item.title}}</span>
+				    </div>
+				    </a>
+				</div>
+				</div>
+		  	</div>
+	  	</div>
+  	</div>
+
+  	<div ng-if="categoriesCount > 0">
+	  	<h5 class="title center">What you want to visit?</h5>
+	  	<div class="row list-categories">
+			<div ng-repeat="item in categories">
+				<div class="col s6 m4 l3 list">
+		    	<div class="card item">
+		    		<a ng-href="#/category/{{item.name}}">
+				    <div class="card-image waves-effect waves-block waves-light">
+						<img ng-src="{{item.image}}" title="{{item.title}}">
+				        <span class="card-title center">{{item.title}}</span>
+				    </div>
+				    </a>
+				</div>
+				</div>
+		  	</div>
+	  	</div>
+  	</div>
+  	</div>
+</div>
