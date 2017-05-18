@@ -67,7 +67,7 @@ var fileToCaches = [
 
 toolbox.precache(fileToCaches);
 
-toolbox.router.get('https://rumahkost.com/api/(.*)', function(req, vals, opts) {
+toolbox.router.get('/(.*)', function(req, vals, opts) {
   return toolbox.networkFirst(req, vals, opts)
     .catch(function(error) {
       if (req.method === 'GET' && req.headers.get('accept').includes('text/html')) {
