@@ -45,7 +45,7 @@ var fileToCaches = [
 	'assets/img/apple-icon-152x152.png',
 	'assets/img/apple-icon-180x180.png',
 
-	'assets/img/favicon.ico',
+	'favicon.ico',
 	'assets/img/icon-16x16.png',
 	'assets/img/icon-32x32.png',
 	'assets/img/icon-96x96.png',
