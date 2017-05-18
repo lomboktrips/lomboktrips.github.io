@@ -30,7 +30,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	padding: 0;
 	margin: 0;
-	background: #f5f5f5;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -105,7 +104,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: dodgerblue!important;
 }
 
-.wrapper a.btn:active, 
+.wrapper a.btn:active,
 .wrapper a.btn:hover {
 	color: #fff!important;
 }
@@ -204,13 +203,13 @@ nav .button-collapse{
 .animate.ng-leave        {
     -webkit-animation:slideOutLeft 0s both ease-in;
 	-moz-animation:slideOutLeft 0s both ease-in;
-	animation:slideOutLeft 0s both ease-in;   
+	animation:slideOutLeft 0s both ease-in;
 }
 
-.animate.ng-enter 		{  
+.animate.ng-enter 		{
     -webkit-animation:slideInLeft 0.5s both ease-in;
 	-moz-animation:slideInLeft 0.5s both ease-in;
-	animation:slideInLeft 0.5s both ease-in;       
+	animation:slideInLeft 0.5s both ease-in;
 }
 
 .item .item-content {
@@ -432,7 +431,7 @@ footer {
   width: 5px;
   margin: 0 1px;
   display: inline-block;
-  
+
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
@@ -476,15 +475,15 @@ footer {
 }
 
 @-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 
 @keyframes sk-stretchdelay {
-  0%, 40%, 100% { 
+  0%, 40%, 100% {
     transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
-  }  20% { 
+  }  20% {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
@@ -557,7 +556,7 @@ footer {
 @keyframes slideOutLeft {
 	to 		{ transform: translateX(-100%); }
 }
-@-moz-keyframes slideOutLeft {	
+@-moz-keyframes slideOutLeft {
 	to 		{ -moz-transform: translateX(-100%); }
 }
 @-webkit-keyframes slideOutLeft {
